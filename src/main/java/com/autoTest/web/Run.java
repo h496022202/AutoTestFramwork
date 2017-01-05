@@ -19,8 +19,8 @@ import java.io.File;
  */
 public class Run {
     public static void main(String[] args) throws InterruptedException {
-        AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
-        BaseAction ba = applicationContext.getBean("baseAction",BaseAction.class);
+       ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext(String.valueOf(Run.class.getClassLoader().getResource("spring.xml")));
+        BaseAction ba = applicationContext.getBean("BaseAction",BaseAction.class);
 
         System.setProperty("webdriver.chrome.driver","D:/dev_soft/driver/chromedriver.exe");
 

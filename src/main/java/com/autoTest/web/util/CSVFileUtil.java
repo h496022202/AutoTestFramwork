@@ -30,7 +30,7 @@ public class CSVFileUtil {
     }
 
     public Map<String,WebElement> readCSV2Map(){
-        WebElement element = new WebElement();
+
         Map<String ,WebElement> map =  new HashMap<String, WebElement>();
         String stemp;
         String []arr=null;
@@ -41,6 +41,7 @@ public class CSVFileUtil {
                 if(arr.length<3){
                     continue;
                 }
+                WebElement element = new WebElement();
                 element.setName(arr[0]);
                 element.setPath(arr[1]);
                 if(arr[2].equals( "xpath")) {
@@ -68,7 +69,7 @@ public class CSVFileUtil {
         CSVFileUtil csv =  new CSVFileUtil("login_src.csv");
         Map<String,WebElement> map  = new HashMap<String, WebElement>();
         map = csv.readCSV2Map();
-        System.out.println(map.toString());
+        System.out.println(map.get("login_btn").getPath());
     }
 
 

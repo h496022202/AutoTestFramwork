@@ -5,6 +5,7 @@ import com.autoTest.web.entity.WebElement;
 import com.autoTest.web.resource.WebElementFindType;
 import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**

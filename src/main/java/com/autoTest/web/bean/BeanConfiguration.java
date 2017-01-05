@@ -1,6 +1,8 @@
 package com.autoTest.web.bean;
 
 import com.autoTest.web.dao.ElementDao;
+import com.autoTest.web.dao.ElementDaoImpl;
+import com.autoTest.web.dao.LoginElementDaoImpl;
 import com.autoTest.web.dao.MainElementDaoImpl;
 import com.autoTest.web.util.BaseAction;
 import com.autoTest.web.util.DateFormat;
@@ -22,8 +24,22 @@ public class BeanConfiguration {
 
     @Bean
     public ElementDao elementDao(){
+        ElementDaoImpl bean  = new ElementDaoImpl();
+        return  bean;
+    }
+
+
+
+    @Bean
+    public ElementDao mainElementDao(){
         MainElementDaoImpl bean = new MainElementDaoImpl();
         return bean;
+    }
+
+    @Bean
+    public ElementDao loginElementDao(){
+        LoginElementDaoImpl bean = new LoginElementDaoImpl();
+        return  bean;
     }
 
     @Bean
