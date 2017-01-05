@@ -1,0 +1,16 @@
+telephone_input,telephone,name
+password_input,password,name
+switch_btn,switch-login-type,class
+
+captcha_input,captcha,name
+send_captcha_btn,div.btn-input.send-captcha.btn-input-active,css
+login_btn,login-btn,class
+register_btn,//*[text()='我要注册'],xpath
+forget_pwd,//*[text()='忘记密码'],xpath
+telephone_not_input,请填写手机号码,errormsg
+telephone_not_correct,请填写正确的手机号码,errormsg
+password_not_input,密码必须输入哦,errormsg
+captcha_not_input,验证码必须输入哦,errormsg
+captcha_not_correct,验证码是6位哦,errormsg
+password_error,密码填写错误,errormsg
+captcha_error,验证码错误,errormsg

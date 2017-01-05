@@ -1,0 +1,3 @@
+login_btn,login-link,class
+register_btn,span.register-link.active,css
+home_btn,//*[text()='首页'],xpath

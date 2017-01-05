@@ -2,7 +2,6 @@ package com.atoTest.testing;
 
 import com.autoTest.web.dao.ElementDao;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -10,7 +9,7 @@ import org.testng.annotations.Test;
  * Created by wb-huangqiang.a on 2016/12/30.
  */
 
-public class head extends  {
+public class head {
 
     @Autowired
     ElementDao elementDao;
