@@ -64,13 +64,4 @@ public class CSVFileUtil {
         }
     return map;
     }
-
-    public static void main(String[] args) {
-        CSVFileUtil csv =  new CSVFileUtil("login_src.csv");
-        Map<String,WebElement> map  = new HashMap<String, WebElement>();
-        map = csv.readCSV2Map();
-        System.out.println(map.get("login_btn").getPath());
-    }
-
-
 }

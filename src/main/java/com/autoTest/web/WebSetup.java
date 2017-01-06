@@ -1,14 +1,11 @@
 package com.autoTest.web;
 
-import com.autoTest.web.bean.BeanConfiguration;
 import com.autoTest.web.entity.WebElement;
 import com.autoTest.web.resource.WebElementFindType;
-import com.autoTest.web.util.BaseAction;
+import com.autoTest.web.Service.base.BaseAction;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Description;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -20,7 +17,7 @@ public class WebSetup {
     WebDriver driver;
     String url;
     String driverurl;
-    AnnotationConfigApplicationContext applicationContext;
+    ClassPathXmlApplicationContext applicationContext;
     BaseAction baseAction;
     @BeforeSuite
     public void suiteSetup(){
@@ -30,7 +27,8 @@ public class WebSetup {
         driver = new ChromeDriver();
         driver.get(url);
         driver.manage().window().maximize();
-        applicationContext = new AnnotationConfigApplicationContext(BeanConfiguration.class);
+        applicationContext = new ClassPathXmlApplicationContext(
+                String.valueOf(this.getClass().getClassLoader().getResource("spring.xml")));
         baseAction = applicationContext.getBean("baseAction",BaseAction.class);
         baseAction.setDriver(driver);
     }

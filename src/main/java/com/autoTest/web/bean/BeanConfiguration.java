@@ -4,7 +4,7 @@ import com.autoTest.web.dao.ElementDao;
 import com.autoTest.web.dao.ElementDaoImpl;
 import com.autoTest.web.dao.LoginElementDaoImpl;
 import com.autoTest.web.dao.MainElementDaoImpl;
-import com.autoTest.web.util.BaseAction;
+import com.autoTest.web.Service.base.BaseAction;
 import com.autoTest.web.util.DateFormat;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

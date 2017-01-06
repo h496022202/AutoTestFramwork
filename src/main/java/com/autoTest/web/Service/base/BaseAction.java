@@ -1,25 +1,16 @@
-package com.autoTest.web.util;
+package com.autoTest.web.Service.base;
 
 import com.autoTest.web.dao.ElementDao;
 import com.autoTest.web.entity.WebElement;
-import com.autoTest.web.resource.WebElementFindType;
 import org.openqa.selenium.By;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by wb-huangqiang.a on 2017/1/3.
  */
-@Service
 public class BaseAction extends PreClass {
 
-    public void setElementDao(ElementDao elementDao) {
-        this.elementDao = elementDao;
-    }
-
-    @Autowired
-    ElementDao elementDao;
 
     public void clickOnElement(String name){
         WebElement element = elementDao.getWebElement(name);

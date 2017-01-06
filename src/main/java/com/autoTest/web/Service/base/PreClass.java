@@ -1,5 +1,6 @@
-package com.autoTest.web.util;
+package com.autoTest.web.Service.base;
 
+import com.autoTest.web.dao.ElementDao;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -7,6 +8,11 @@ import org.openqa.selenium.WebDriver;
  */
 public class PreClass {
     WebDriver driver;
+    ElementDao elementDao;
+
+    public void setElementDao(ElementDao elementDao) {
+        this.elementDao = elementDao;
+    }
 
     public PreClass() {
     }
